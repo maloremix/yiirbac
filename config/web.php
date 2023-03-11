@@ -32,6 +32,9 @@ $config = [
             // send all mails to a file by default.
             'useFileTransport' => true,
         ],
+        'authManager' => [
+            'class' => 'yii\rbac\DbManager',
+        ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
