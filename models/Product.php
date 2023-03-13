@@ -5,6 +5,7 @@ namespace app\models;
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
 use yii\db\Expression;
+use yii\filters\AccessControl;
 
 class Product extends ActiveRecord
 {
@@ -18,6 +19,7 @@ class Product extends ActiveRecord
                 'value' => new Expression('NOW()'),
             ],
         ];
+
     }
 
     public function getCategory(){

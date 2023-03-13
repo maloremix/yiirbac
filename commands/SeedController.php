@@ -4,12 +4,13 @@ namespace app\commands;
 
 use app\models\Category;
 use app\models\Product;
+use Faker\Factory;
 use yii\console\Controller;
 
 class SeedController extends Controller
 {
     public function actionIndex(){
-        $faker = \Faker\Factory::create();
+        $faker = Factory::create();
         for ( $i = 1; $i <= 5; $i++ ){
             $category = new Category();
             $category->title = $faker->text(30);
